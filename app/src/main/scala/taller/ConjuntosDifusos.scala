@@ -10,22 +10,26 @@ class ConjuntosDifusos() {
   }
 
   def grande(d: Int, e: Int) : ConjDifuso = {
-        (n: Int) =>{
+        (n: Int) => {
             pow((n.toDouble/(n+d).toDouble),e.toDouble)
         }
   }
 
   def complemento(c: ConjDifuso) : ConjDifuso = {
-    (n : Int) =>{
+    (n : Int) => {
       1 - c(n)
     }
   }
 
   def union(cd1: ConjDifuso, cd2: ConjDifuso): ConjDifuso = {
-    (n : Int) =>{
+    (n : Int) => {
       math.max(cd1(n), cd2(n))
     }
   }
-  
-  
+
+  def interseccion(cd1: ConjDifuso, cd2: ConjDifuso): ConjDifuso = {
+    (n: Int) => {
+      math.min(cd1(n), cd2(n))
+    }
+  }
 }
