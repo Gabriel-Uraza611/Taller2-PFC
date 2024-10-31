@@ -21,4 +21,11 @@ class ConjuntosDifusos() {
     }
   }
 
+  def union(cd1: ConjDifuso, cd2: ConjDifuso): ConjDifuso = {
+    (n : Int) =>{
+      math.max(cd1(n), cd2(n))
+    }
+  }
+  
+  
 }
