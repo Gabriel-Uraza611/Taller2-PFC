@@ -10,10 +10,15 @@ class ConjuntosDifusos() {
   }
 
   def grande(d: Int, e: Int) : ConjDifuso = {
-      //Implementacion funcion grande(GABRIEL)
         (n: Int) =>{
             pow((n.toDouble/(n+d).toDouble),e.toDouble)
         }
+  }
+
+  def complemento(c: ConjDifuso) : ConjDifuso = {
+    (n : Int) =>{
+      1 - c(n)
+    }
   }
 
 }
