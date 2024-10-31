@@ -32,4 +32,15 @@ class ConjuntosDifusos() {
       math.min(cd1(n), cd2(n))
     }
   }
+
+  def inclusion(cd1: ConjDifuso, cd2: ConjDifuso) : Boolean = {
+    def auxiliar(n: Int): Boolean = {
+      if (n > 1000) true
+      else{
+        if (cd1(n) > cd2(n)) false
+        else auxiliar(n + 1)
+      }
+    }
+    auxiliar(0)
+  }
 }

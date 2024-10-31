@@ -25,12 +25,13 @@ object App {
     println(s"Complemento del grado de pertenencia de 12: $resultComp2")
     println(s"Complemento del grado de pertenencia de 22: $resultComp3")
 
-    //?COMPROBACIONES FUNCION UNION E INTERSECCION______________________________________
+    //?COMPROBACIONES FUNCION UNION/INTERSECCION/INLUSION/IGUALDAD______________________
 
     val conjGrande1 = new ConjuntosDifusos().grande(2,3)
     val conjGrande2 = new ConjuntosDifusos().grande(1,3)
     val conjuntoUnion = new ConjuntosDifusos().union(conjGrande1, conjGrande2)
     val conjuntoInterseccion = new ConjuntosDifusos().interseccion(conjGrande1,conjGrande2)
+    val conjuntoInclusion = new ConjuntosDifusos().inclusion(conjGrande1,conjGrande2)
 
     val resultUnion1 = conjuntoUnion(2)
     val resultUnion2 = conjuntoUnion(12)
@@ -46,5 +47,6 @@ object App {
     println(s"Grado de pertenencia de 2 en la Interseccion: $resultIntersec1")
     println(s"Grado de pertenencia de 12 en la Interseccion: $resultIntersec2")
     println(s"Grado de pertenencia de 22 en la Interseccion: $resultIntersec3")
+    println(s"El conjunto grande 1 esta incluido en el conjunto grande 2?: $conjuntoInclusion")
   }
 }
