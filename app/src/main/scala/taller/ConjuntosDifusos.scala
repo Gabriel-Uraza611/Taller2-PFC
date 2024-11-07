@@ -1,5 +1,6 @@
 package taller
 import scala.math.pow
+import scala.annotation.tailrec
 
 class ConjuntosDifusos() {
   
@@ -34,6 +35,7 @@ class ConjuntosDifusos() {
   }
 
   def inclusion(cd1: ConjDifuso, cd2: ConjDifuso) : Boolean = {
+    @tailrec
     def auxiliar(n: Int): Boolean = {
       if (n > 1000) true
       else{
