@@ -1,6 +1,6 @@
 # TALLER 2 PROGRAMACION FUNCIONAL
 
-## CONJUNTOS DIFUSOS
+## FUNCIONES DE ALTO ORDEN
 
 - Diego Fernando Lenis Delgado - 2359540
 - Gabriel Uraza García - 2359594
